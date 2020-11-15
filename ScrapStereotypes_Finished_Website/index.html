@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scrap Stereotypes</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:800|Open+Sans:400,400i,700,700i,800" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+<div id="frame"></div>
+<div id="content">
+  <div id="title"> Scrap Stereotypes <!-- title --> 
+  </div>
+  <ul class="tabs">
+    <li class="tab-link current" data-tab="tab-1">01</li>
+    <li class="tab-link" data-tab="tab-2">02</li>
+    <li class="tab-link" data-tab="tab-3">03</li>
+  </ul>
+  <div id="tab-1" class="tab-content current">
+    <div id="index"> 
+      <div id="avatar"></div>
+      <div id="quote"> Scrap Stereotypes Group Project.
+      </div>
+    </div>
+  </div>
+  <div id="tab-2" class="tab-content"> 
+    <div id="banner"></div>
+    <div id="stats">
+      <div class="column"> 
+        <b>Name</b> Scrap Stereotypes<br>
+        <b>Theme</b> Identity<br>
+        <b>Location</b> Dublin, IRL<br>
+      </div>
+      <div class="column"> 
+        <b>Target</b> College Students<br>
+        <b>Software</b> Adobe<br>
+        <b>Team</b> Ingrida, Kayleigh, Dylan 
+      </div>
+    </div>
+    <hr>
+    Scrap Stereotypes is a group of 3 second year Creative Digital Media students from TU Dublin, Blanchardstown. Our <a href="team.html">team</a> members are <i>Dylan, Ingrida and Kayleigh.</i> Through this project we wanted to showcase stereotypes of college students in Dublin, Ireland. Due to the COVID-19 breakout, our project had to be adjusted - from a physical exhibition of interactive images to an online interactive website! <b>We hope you enjoy reading about our project in more detail and best of luck on the quiz!</b>   
+  </div>
+  <div id="tab-3" class="tab-content">
+    <div id="tags"> 
+      Welcome to our Second Year CDM (Creative Digital Media) Group Project. "Scrap Stereotypes" is a project which aims to challenge stereotypes revolving around college students in the Dublin region.<br>
+		
+	  To do this, we asked a variety of students from different courses and year groups on our campus to be photographed in our college's photography studio on a plain white backdrop. We compiled these photographs, edited them and put them on display on the site you are on now.<br>
+
+	  This site aims to add a sense of gamification to stereotyping groups of people - showing how easily we judge people in our everyday lives. It shows that outward appearances may not necessarily reflect your prejudice of that person. We created the interactive quiz to show stereotyping, and what better way to show it than having you, yourself, stereotype the students in the quiz. Through the quiz we display how easy it is to judge someone based on their appearance.<br>
+
+	  Our project was originally intended to be an interactive installation with magnetic photographs, but due to the COVID-19 outbreak we had to adapt this into a website format. We had planned for people to come into our installation and move around the photos on magnetic boards to fit into certain groups; instead, we adapted it into this multiple choice quiz. We incorporated all our original ideas into this quiz and site.<br>
+		
+	  We hope you enjoy our final output on this project. We hope you like reading about our project, our team members and most importantly - we hope you have fun trying out our quiz!s
+    </div>
+  </div>
+  <nav> <a href="index.html">Home</a> <a href="team.html">Team</a> <a href="quiz.html">Quiz</a> </nav>
+</div>
+<script src="https://static.tumblr.com/yzs4yqx/lOsokx99u/smoothscroll.min.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+$(document).ready(function(){
+    $('ul.tabs li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+    });
+    
+    $('ul.tabs li').click(function(){
+        var masonry = new Macy({
+        container: '#tags',
+        debug: true,
+        columns: 2,
+        margin: {
+            x: 10,
+            y: 25
+        }
+    });
+    });
+});
+</script>
+</body>
+</html>
